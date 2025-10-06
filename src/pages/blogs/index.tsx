@@ -33,8 +33,7 @@ export default function Blogs(): React.JSX.Element {
     } else {
       const filtered = blogs.filter(blog =>
         blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        blog.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredBlogs(filtered);
     }
